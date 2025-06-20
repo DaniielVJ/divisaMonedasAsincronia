@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #f5b1bc, #e287b5);
+
+}
+
+
+main {
+    border: 1px gray solid;
+    border-radius: 0.5px;
+    width: 700px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.seccionMoneda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccionDeSeleccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccionDeResultado {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.seccionDeResultado div {
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

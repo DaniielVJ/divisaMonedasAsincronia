@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de Monedas</title>
+    <link rel="stylesheet" href="css/estilos2.css"/>
+    <script src="js/consultarMoneda.js"></script>
+</head>
+<body>
+    
+    <main>
+        <h1>Selecciona tu Moneda</h1>
+
+        <section class="seccionMoneda">
+            <h2 id="tituloMoneda">Moneda</h2>
+            <div>
+                <img src="img/moneda.png" id="imagenMoneda" width="200px" height="200px"/>
+            </div>
+            </section>
+
+        <section class="seccionDeSeleccion">
+            <label for="monedaElegida">Selecciona tu Moneda</label>
+            <select id="monedaElegida">
+                <option value="nada">----</option>
+                <option value="CLP">CLP</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EURO</option>
+            </select>
+        </section>
+
+        <section class="seccionDeResultado">
+            
+            <div id="resultado">
+                <img id="imagenCarga"/>
+                <ul id="listaMonedas"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2><a href="">Repositorio Codigo Fuente</a></h2>
+    </footer>
+
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

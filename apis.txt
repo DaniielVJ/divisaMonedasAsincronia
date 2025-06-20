@@ -1,0 +1,6 @@
+- Obtener el precio del Dolar en tiempo real en diferentes monedas cada vez que consultamos
+    https://open.er-api.com/v6/latest/USD
+- Obtener precio del peso chileno para diferentes monedas del mundo
+    https://open.er-api.com/v6/latest/CLP
+- Obtener precio del euro a otras divisas.
+    https://open.er-api.com/v6/latest/CLP
