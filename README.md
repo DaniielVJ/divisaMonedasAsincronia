@@ -1,6 +1,7 @@
 # Proyecto de Práctica: Asincronía con JavaScript
 
 Este proyecto lo construí como parte de mi práctica en la sección de **asincronía** de un curso de JavaScript. Es mi **primer ejercicio** aplicando distintos enfoques para manejar operaciones asincrónicas.
+**URL**: https://divisasdanielvaldebenito.netlify.app/
 
 ## 🎯 Objetivo
 
