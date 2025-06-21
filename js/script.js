@@ -6,6 +6,8 @@ let elementCarga = document.getElementById('imagenCarga');
 let elementListaMonedas = document.getElementById('listaMonedas');
 let elementInputMoneda;
 let hayCola = false;
+let elementMontoIngresado = document.getElementById('monto');
+let monedaSeleccionada;
 
 
 
@@ -18,16 +20,36 @@ function Moneda(nombre, dolar, clp, euro){
     this.euro = euro;
 }
 
+
+
+
+function calcularDivisa(event){
+    if((!isNaN(event.key) || event.key === 'Backspace') && !(elementSeleccion.value === 'nada')){
+        if(elementMontoIngresado.value !== ""){
+            let valorIngresado = parseFloat(event.target.value);
+            document.getElementById('valorMonedaCLP').innerText = (parseFloat(monedaSeleccionada.clp) * valorIngresado);
+            document.getElementById('valorMonedaUSD').innerText = (parseFloat(monedaSeleccionada.dolar) * valorIngresado);
+            document.getElementById('valorMonedaEUR').innerText = (parseFloat(monedaSeleccionada.euro) * valorIngresado);
+        }
+    } else {
+        event.preventDefault();
+        alert("Seleccione una Divisa");
+    }
+}
+
+
 function construirHTML(moneda){
     setTimeout(function() {
         elementCarga.setAttribute("src", "");
         elementCarga.style.display = "none";
         listaMonedas.innerHTML = `  
-                    <li><strong>CLP</strong>: ${moneda.clp}</li>
-                    <li><strong>USD</strong>: ${moneda.dolar}</li>
-                    <li><strong>EUR</strong>: ${moneda.euro}</li>
+                    <li><strong>CLP</strong>: <span id="valorMonedaCLP">${moneda.clp}</span></li>
+                    <li><strong>USD</strong>: <span id="valorMonedaUSD">${moneda.dolar}</span></li>
+                    <li><strong>EUR</strong>: <span id="valorMonedaEUR">${moneda.euro}</span></li>
                 `;
         hayCola = false;
+        monedaSeleccionada = moneda;
+
     }, 1000); 
     
 }
@@ -85,6 +107,6 @@ async function cambiarMoneda(event) {
 
 // Registro evento al selector
 elementSeleccion.addEventListener('change', cambiarMoneda);
-
+elementMontoIngresado.addEventListener('keyup', calcularDivisa);
 
 

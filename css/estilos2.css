@@ -94,6 +94,22 @@ h1 {
   outline: none;
 }
 
+
+#monto {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 2px solid #d63384;
+}
+
+#monto:focus {
+    border: 2px solid black;
+    outline: none;
+
+}
+
 /* Resultado */
 .seccionDeResultado {
   display: flex;
